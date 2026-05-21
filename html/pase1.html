@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="vi">
 	<head>
-		<title>Trang số 1</title>
+		<title>Thiết kế from đăng nhập</title>
 		<meta charset = "ulf-8">
+		<link rel="stylesheet" href="../css/stylesheet2.css">
 	</head>
 	<body>
-		<p>Đây là Trang số 1</p>
+		<div class ="container">
+			<form id = "frmLogin">
+				<h2 id="title">Đăng Nhập</h2>
+					<div class = "form-group">
+						<label for = "txtUsername">Username</label>
+						<input class ="form-control" type ="text" id ="txtUsername" name ="txtUsername">
+					</div>
+					<div class = "form-group">
+						<label for = "txtPassword">Password</label>
+						<input class ="form-control" type ="text" id ="txtPassword" name ="txtPassword">
+					</div>
+					<input class ="button" type ="submit" name ="sbLohin" id ="sbLogin" value="Login">
+					<input class ="button" type ="reset" name ="sbCancel" id ="sbCancel" value="Cancel">
+			</form>
+		</div>
 	</body>
 	
 </html>

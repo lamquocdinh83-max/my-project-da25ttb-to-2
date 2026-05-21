@@ -1,0 +1,50 @@
+
+*{	
+	margin:0px;
+	padding:0px;
+	font-family:"Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height:2;
+	color:white;
+}
+
+.container{
+	margin: 0px 50px;
+}
+
+form#frmLogin{
+	background-color:#4ec089;
+	padding:50px 50px;
+	max-width:500px;
+	width:100%;
+	margin: auto;
+}
+
+#title{
+	text-transform: uppercase;
+	text-align: center;
+}
+lable{
+	display:block;
+	color:green;
+	font-weight:bolder;
+}
+
+.form-control{
+	width:100%;
+	margin:4px 0px;
+}
+.button{
+	padding:2px;
+	width:100px;
+	background-color:white;
+	color:#4ec089;
+	border-radius:5px;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	min-height:900px;
+}
