@@ -1,15 +1,20 @@
 
+
 *{	
 	margin:0px;
 	padding:0px;
 	font-family:"Times New Roman", Times, serif;
-	font-size: 13pt;
+	font-size: 16pt;
 	line-height:2;
 	color:black;
+	box-sizing: boder-box;
 }
 
 .container{
-	margin: 0px 50px;
+	
+	weight:100%
+	max-width:680px;
+	background-color:#4ec089;
 }
 
 form#frmLogin{
@@ -35,6 +40,7 @@ lable{
 	margin:4px 0px;
 }
 .button{
+	
 	margin:4px 0px;
 	padding:2px;
 	width:100px;
@@ -48,4 +54,6 @@ body{
 	justify-content: center;
 	align-items:center;
 	min-height:600pt;
+	background-color:#39b097;
+	
 }
