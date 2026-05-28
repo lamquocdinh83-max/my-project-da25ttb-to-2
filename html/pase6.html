@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<title>Hóa Đơn Mua Hàng</title>
+		<meta charset = "ulf-8">
+        <link rel="stylesheet" href="../css/stylesheet7.css">
+	</head>
+	<body>
+		<table>
+            <tr>
+                <th>STT</th>
+                <th>Tên Hàng</th>
+                <th>Số Lượng</th>
+                <th>Đơn Giá</th>
+                <th>Đvt</th>
+                <th>Thành Tiền</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class = "tenhang">Mì Siêu Cay</td>
+                <td class = "soluong">50</td>
+                <td class = "donggia">65000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+                <td>2</td>
+                <td class = "tenhang">CoCa</td>
+                <td class = "soluong">100</td>
+                <td class = "donggia">95000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class = "tenhang">Bánh Mì</td>
+                <td class = "soluong">30</td>
+                <td class = "donggia">45000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class = "tenhang">Dâu Tây</td>
+                <td class = "soluong">50</td>
+                <td class = "donggia">85000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class = "tenhang">Kẹo Chua</td>
+                <td class = "soluong">40</td>
+                <td class = "donggia">40000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class = "tenhang">Matcha</td>
+                <td class = "soluong">100</td>
+                <td class = "donggia">900000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class = "tenhang">Sầu Riêng</td>
+                <td class = "soluong">20</td>
+                <td class = "donggia">900000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            </tr>
+                <td>8</td>
+                <td class = "tenhang">Bánh</td>
+                <td class = "soluong">100</td>
+                <td class = "donggia">500000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            </tr>
+                <td>9</td>
+                <td class = "tenhang">Nước Tương</td>
+                <td class = "soluong">40</td>
+                <td class = "donggia">500000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+            </tr>
+                <td>10</td>
+                <td class = "tenhang">Siting</td>
+                <td class = "soluong">100</td>
+                <td class = "donggia">700000</td>
+                <td>Thùng</td>
+                <td class = " thanhtien">?</td>
+            </tr>
+
+            <tr>
+                <td colspan="5">Tổng Thanh Toán</td>
+                <td id = "tongthanhtoan">?</td>
+            </tr>
+        </table>
+        <script>
+            // truy xuất
+            const sl = document.getElementsByClassName("soluong");
+            const dg = document.getElementsByClassName("donggia");
+            const tt = document.getElementsByClassName("thanhtien");
+            //khởi tạo
+            let tongthanhtoan = 0;
+
+            //Duyệt mảng
+            for(let i = 0; i< sl.length; i++)
+            {
+                let thanhtien = parseInt(sl[i].innerText)* parseInt(dg[i].innerText);
+                tt[i].innerText = thanhtien;
+                tongthanhtoan += thanhtien;
+            }
+            // cập nhật giá trị
+            document.getElementById("tongthanhtoan").innerText = tongthanhtoan;
+        </script>
+	</body>
+	
+</html>

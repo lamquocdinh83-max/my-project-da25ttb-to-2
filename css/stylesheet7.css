@@ -1,0 +1,20 @@
+
+*{	
+	margin:10px;
+	padding:0;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height:2;
+	color:#006647;
+	
+	
+}
+
+
+table,tr,td{
+	background-color:#00b763;
+	border:1px solid black;
+  	border-radius: 25px;
+	border:none;
+}
+

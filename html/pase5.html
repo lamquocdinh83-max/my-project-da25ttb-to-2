@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<title>Tính Diện Tích Hình Chữ Nhật</title>
+		<meta charset = "ulf-8">
+        <link rel="stylesheet" href="../css/stylesheet6.css">
+	</head>
+	<body>
+		<script>
+				let d = Number(prompt("Nhập Chiều Dài"));
+                let r;
+                do{
+                 r = Number(prompt("Nhập Chiều Rộng"));
+                    if(r>d)
+                        alert("Nhập Lại đi má !!!!");
+                }while(r>d);
+
+                if(r==d)
+                {
+                    alert(`Trường Hợp Đặc Biệt: diện tích hình vuông có cạnh ${d}cm là ${d*r} cm^2`);
+                }
+                else
+                {
+                    alert(`Diện tích hình chữ nhật có chiều dài ${d} cm và chiều rộng ${r} cm là ${d*r} cm^2`);
+                }
+		</script>
+	</body>
+	
+</html>
