@@ -1,0 +1,129 @@
+/* ===== TRANG CHI TIẾT SẢN PHẨM ===== */
+
+body {
+    background-color: #f8f5f0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Nút quay lại */
+.btn-back {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 8px 20px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #e8e0d5;
+    color: #2d2013;
+}
+
+/* Card chi tiết */
+.detail-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Khung ảnh */
+.detail-image-wrap {
+    flex: 1 1 300px;
+    background: #f0ebe3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    min-height: 320px;
+}
+
+.detail-image-wrap img {
+    max-height: 280px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Nội dung thông tin */
+.detail-body {
+    flex: 1 1 320px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d2013;
+    margin-bottom: 10px;
+}
+
+.detail-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #c0722a;
+    margin-bottom: 20px;
+}
+
+.detail-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+/* Badge tag */
+.badge-tag {
+    display: inline-block;
+    background: #fef3e8;
+    color: #c0722a;
+    border: 1px solid #f5d9b5;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+/* Thông báo lỗi / không tìm thấy */
+.not-found {
+    text-align: center;
+    padding: 80px 20px;
+    color: #888;
+}
+
+.not-found h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+    .detail-image-wrap {
+        padding: 24px 16px;
+        min-height: 220px;
+    }
+
+    .detail-body {
+        padding: 24px 20px;
+    }
+
+    .detail-name {
+        font-size: 1.5rem;
+    }
+
+    .detail-price {
+        font-size: 1.15rem;
+    }
+}

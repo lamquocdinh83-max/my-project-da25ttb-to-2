@@ -128,14 +128,14 @@ function addItemV2(obj)
     list.innerHTML +=`
                 <div class="col">
                     <div class="card product-item">
-                        <div class = "product-image">
+                        <div class="product-image">
                             <img class="card-img-top" src="${obj.image}" alt="${obj.name}">
                         </div>
                         <div class="card-body bg-light product-info">
-                            <h4 class = "card-title">${obj.name}</h4>
-                            <h5 class = "card-text">${obj.price}000</h5>
-                            <p class = "card-text">${obj.description}</p>
-                            <a class = "btn btn-info" href = "${obj.link}">Xem chi tiết</a>
+                            <h4 class="card-title">${obj.name}</h4>
+                            <h5 class="card-text">${obj.price}000 ₫</h5>
+                            <p class="card-text">${obj.description}</p>
+                            <a class="btn btn-info" href="${obj.link}?id=${obj.id}">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ function addItemV2(obj)
 function loadAllProducts(array)
 {
     let i = 0;
-    while(i<array.length)
+    while(i < array.length)
     {
         addItemV2(array[i]);
         i++;

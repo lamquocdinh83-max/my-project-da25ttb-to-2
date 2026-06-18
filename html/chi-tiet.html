@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Chi Tiết Sản Phẩm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet11.css">
+</head>
+<body>
+    <div class="container py-5">
+
+        <a href="pase9.html" class="btn-back">← Quay lại menu</a>
+
+        <div id="detail-content"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/lib1.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const container = document.getElementById("detail-content");
+
+        if (id) {
+            const nuoc = products.find(item => item.id == id);
+
+            if (nuoc) {
+                container.innerHTML = `
+                    <div class="detail-card">
+                        <div class="detail-image-wrap">
+                            <img src="${nuoc.image}" alt="${nuoc.name}">
+                        </div>
+                        <div class="detail-body">
+                            <div class="detail-name">${nuoc.name}</div>
+                            <div class="detail-price">${nuoc.price}000 ₫</div>
+                            <p class="detail-description">${nuoc.description}</p>
+                            <span class="badge-tag">Đồ uống</span>
+                            <span class="badge-tag">Thức uống mát</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="not-found">
+                        <h3>Không tìm thấy sản phẩm</h3>
+                        <p>Sản phẩm bạn tìm không tồn tại.</p>
+                    </div>
+                `;
+            }
+        } else {
+            container.innerHTML = `
+                <div class="not-found">
+                    <h3>Không có sản phẩm nào được chọn</h3>
+                    <p>Vui lòng quay lại menu và chọn một sản phẩm.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
