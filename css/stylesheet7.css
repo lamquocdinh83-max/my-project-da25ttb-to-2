@@ -1,20 +1,76 @@
-
-*{	
-	margin:10px;
-	padding:0;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 16px;
-	line-height:2;
-	color:#006647;
-	
-	
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+ 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f4ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1rem;
 }
-
-
-table,tr,td{
-	background-color:#00b763;
-	border:1px solid black;
-  	border-radius: 25px;
-	border:none;
+ 
+table {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(26,86,219,0.10), 0 1px 4px rgba(0,0,0,0.06);
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
 }
-
+ 
+/* Header */
+table tr:first-child {
+  background: #1a56db;
+}
+ 
+th {
+  padding: 0.85rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+}
+ 
+td {
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  color: #374151;
+  border-bottom: 1px solid #f0f4ff;
+}
+ 
+/* Số tiền căn phải */
+td.soluong, td.donggia, td.thanhtien,
+td[class~="thanhtien"] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+ 
+/* Zebra rows */
+tr:nth-child(even) td { background: #f7f9ff; }
+tr:nth-child(odd)  td { background: #fff; }
+ 
+tr:hover td { background: #eef2ff; transition: background 0.15s; }
+ 
+/* Dòng tổng */
+tr:last-child td {
+  background: #eef2ff !important;
+  font-weight: 700;
+  color: #1a56db;
+  border-top: 2px solid #1a56db;
+  font-size: 0.95rem;
+}
+ 
+#tongthanhtoan {
+  text-align: right;
+  font-size: 1rem;
+  color: #1a56db;
+  font-weight: 700;
+}
